@@ -3,7 +3,7 @@
 // const cpuMasters
 
 
-const catalogoGpu = `Que tarjeta de video desea compar?\n A| NVIDIA GeForce RTX 4060 $300 \n B| NVIDIA GeForce RTX 4070 $600\n C | NVIDIA GeForce RTX 4080 $900\n D| NVIDIA GeForce RTX 4090 $1500`;
+/*const catalogoGpu = `Que tarjeta de video desea compar?\n A| NVIDIA GeForce RTX 4060 $300 \n B| NVIDIA GeForce RTX 4070 $600\n C | NVIDIA GeForce RTX 4080 $900\n D| NVIDIA GeForce RTX 4090 $1500`;
 
 const gpuA = " Desea realizar la compra de NVIDIA GeForce RTX 4060? \nPrecio final:$300";
 
@@ -47,4 +47,50 @@ validarPrimerPregunta()
      if (validarPrimerPregunta === confirm){
         alert(finalizarCompra)
      }
- }
+ }*/
+
+
+ let loop = true
+while (loop) {
+
+    Bienvenida = confirm("Bienvenido a CPUMarters, las mejores tarjetas graficas del mercado a el mejor precio. \nDesea ver nuestro catalogo?")
+
+
+    if (Bienvenida) {
+
+
+        //arrays
+        const procesoCompra = [
+            {
+                pregunta: ["Que tarjeta de video desea compar?"],
+                opciones: ["A | NVIDIA GeForce RTX 4060 $300", "B | NVIDIA GeForce RTX 4070 $600", "C | NVIDIA GeForce RTX 4080 $900", "D | NVIDIA GeForce RTX 4090 $1500"],
+                respuestas: ["A", "B", "C", "D"]
+            },
+            {
+                gpuOpciones: [
+                    "Desea realizar la compra de NVIDIA GeForce RTX 4060? \nPrecio final:$300", " Desea realizar la compra de NVIDIA GeForce RTX 4070? \nPrecio final:$600", " Desea realizar la compra de NVIDIA GeForce RTX 4080? \nPrecio final:$900", " Desea realizar la compra de NVIDIA GeForce RTX 4090? \nPrecio final:$1500",
+                ]
+            },
+            {
+                textoAclaracion: [
+                    "\nPor favor solo ingrese A, B, C, D como respuesta, gracias."
+                ],
+                finalizarCompra: [
+                    "Felicidades su compra se ha realizado con exito"
+                ]
+            }
+        ]
+
+        function inciarCompra(){
+            const catalogo = prompt( procesoCompra.pregunta)
+        }
+    }
+    
+        inciarCompra();
+
+
+    
+    /*else {
+        alert("Felicidades su compra se ha realizado con exito")
+    }*/
+}
