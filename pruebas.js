@@ -2,64 +2,11 @@
 
 // const cpuMasters
 
-
-/*const catalogoGpu = `Que tarjeta de video desea compar?\n A| NVIDIA GeForce RTX 4060 $300 \n B| NVIDIA GeForce RTX 4070 $600\n C | NVIDIA GeForce RTX 4080 $900\n D| NVIDIA GeForce RTX 4090 $1500`;
-
-const gpuA = " Desea realizar la compra de NVIDIA GeForce RTX 4060? \nPrecio final:$300";
-
-const gpuB = " Desea realizar la compra de NVIDIA GeForce RTX 4070? \nPrecio final:$600";
-
-const gpuC = " Desea realizar la compra de NVIDIA GeForce RTX 4080? \nPrecio final:$900";
-
-const gpuD = " Desea realizar la compra de NVIDIA GeForce RTX 4090? \nPrecio final:$1500";
-
-const finalizarCompra = "Felicidades su compra se ha realizado con exito";
-
-const textoAclaracion = "\nPor favor solo ingrese A, B, C, D como respuesta, gracias.";
-
-const primerPregunta = prompt(catalogoGpu).toUpperCase()
-
-
-const validarPrimerPregunta = (respuestaPrimerPregunta)=>{
-if (primerPregunta === "A") {
-    confirm(gpuA);
-
-}
-else if (primerPregunta === "B") {
-    confirm(gpuB);
-}
-else if (primerPregunta === "C") {
-    confirm(gpuC);
-}
-else if(primerPregunta === "D") {
-    confirm(gpuD);
-}
-
-else{
-    alert(textoAclaracion);
-
-}
-}
-
-validarPrimerPregunta()
-
- const compraFinalizada = (finalCompra)=>{
-     if (validarPrimerPregunta === confirm){
-        alert(finalizarCompra)
-     }
- }*/
-
-
- let loop = true
+let loop = true
 while (loop) {
-
     Bienvenida = confirm("Bienvenido a CPUMarters, las mejores tarjetas graficas del mercado a el mejor precio. \nDesea ver nuestro catalogo?")
 
-
     if (Bienvenida) {
-
-
-        //arrays
         const procesoCompra = [
             {
                 pregunta: ["Que tarjeta de video desea compar?"],
@@ -81,16 +28,24 @@ while (loop) {
             }
         ]
 
-        function inciarCompra(){
-            const catalogo = prompt( procesoCompra.pregunta)
+        function inciarCompra() {
+            return prompt(procesoCompra[0].pregunta[0] + '\n' + procesoCompra[0].opciones.join('\n')).toUpperCase
         }
+
+        //let respuestaUsuario = inciarCompra();
+        function ejecutarCompra() {
+            if (inciarCompra() === procesoCompra[0].respuestas){
+            prompt(procesoCompra[0].gpuOpciones)
+            }
+        
+        };
+
+        ejecutarCompra()
+
     }
-    
-        inciarCompra();
+    else(
+        alert("gracias por visitarnos, vuelva por visitarnos vuelva pronto.")
+    )
 
-
-    
-    /*else {
-        alert("Felicidades su compra se ha realizado con exito")
-    }*/
 }
+//hola profes, esta preentrega me gano, no puedo de ejecutar lo que tengo en la mente, mi idea era relizar una mini compra donde se muestran las diferentes gpus con sus precios, que el usuario eliga la opcion correspordiente y que luego salga un confirm donde el usuario confirme que quiere comprar la tarjeta que selecciono y por ultimo un mensaje donde diga que la compra se ha realizado con exito, haciendolo sin arrays pude lograrlo, pero cuando trate escribir nuevamente el codigo con arrays se me hizo imposible, les pido perdon si el codigo que escribi es horroroso, es lo mejor que pude hacer, les agradeceria cualquier tipo de ayuda y consejo para saber cuales son mis errores.
