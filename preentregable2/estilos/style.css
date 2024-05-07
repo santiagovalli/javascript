@@ -1,0 +1,636 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.tituloBase, .tituloContacto, .staffContainer figure, .tituloNosotros, .seccionCocteles #cocteles .photoContainer .productoCoctel h5, .seccionCocteles .tituloMainCocteles, .mainEvents .eventosContainer .eventos, .mainEvents .tituloEventos, .h1Index {
+  color: black;
+  font-weight: bold;
+}
+
+.parrafoBase, .seccionCocteles #cocteles .photoContainer .productoCoctel p {
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@keyframes pilaresAnimation {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+header {
+  z-index: 1;
+  font-family: "roboto";
+  display: flex;
+  position: sticky;
+  top: 0%;
+  align-items: center;
+  background: rgb(156, 120, 74);
+  background: radial-gradient(circle, #9c784a 0%, #dab17d 100%);
+}
+header .navbar {
+  padding: 0;
+}
+header .navbar div.container-fluid {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+header .navbar div.container-fluid a {
+  padding: 0%;
+}
+header .navbar div.container-fluid img {
+  height: 60px;
+  width: 180px;
+  transition: all 0.3s;
+}
+header .navbar div.container-fluid img:hover {
+  transform: scale(1.1);
+}
+header .navbar div.container-fluid li {
+  padding: 0px 20px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+header .navbar div.container-fluid li:hover {
+  transform: scale(1.1);
+}
+header .navbar div.container-fluid li a {
+  display: inline;
+  padding: 1px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  background-color: #e6ccea;
+  color: black;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+header .navbar div.container-fluid li a:hover {
+  color: #e9ad5f;
+  transform: scale(1.1);
+}
+
+header .navbar div.container-fluid a#cartContainer{
+  font-size: 1.1rem;
+  padding: 0px 20px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+header .navbar div.container-fluid a#cartContainer:hover{
+  transform: scale(1.1);
+}
+
+body {
+  background: radial-gradient(circle, #335D73, #426D7E, #535252);
+}
+
+.h1Index {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.listaPilares {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  animation: pilaresAnimation 2s ease 0s 1 normal forwards;
+}
+.listaPilares .pilarescontainer {
+  border-radius: 10px;
+  padding: 3px 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+  background: linear-gradient(0deg, #e9ad5f 0%, #e67b5c 100%);
+  display: inline;
+  text-decoration: none;
+}
+
+#parrafoInicio {
+  margin: 1rem;
+}
+
+.carouselContainer {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 40%;
+  justify-content: center;
+}
+.carouselContainer img {
+  width: auto;
+  height: auto;
+}
+
+.mainEvents .tituloEventos {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.mainEvents .eventosContainer {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+  width: auto;
+  margin: 0px 20px;
+}
+.mainEvents .eventosContainer .eventos {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainEvents .eventosContainer .eventos figcaption {
+  text-align: center;
+  margin-top: 10px;
+  width: 70%;
+}
+
+.seccionCocteles .tituloMainCocteles {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.seccionCocteles #cocteles {
+  flex-flow: column wrap;
+  display: flex;
+}
+.seccionCocteles #cocteles .tituloCocteles {
+  color: #e67b5c;
+  justify-content: center;
+  display: flex;
+  padding: 5px;
+}
+.seccionCocteles #cocteles #productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.seccionCocteles #cocteles #productsContainer #productoCoctel {
+  padding: 40px 40px 0px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: min-content;
+}
+.seccionCocteles #cocteles #productsContainer #productoCoctel h4 {
+  word-wrap: break-word;
+  font-size: 2rem;
+}
+.seccionCocteles #cocteles #productsContainer #productoCoctel h5 {
+  font-size: 1.2rem;
+}
+
+.seccionCocteles #cocteles #productsContainer #productoCoctel button {
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #ab4493;
+  border-color: #ab4493;
+  border-style: solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* inicio carrito */
+#seccionCarrito #productsContainer{
+width: 90%;
+margin:auto;
+}
+
+#seccionCarrito #productsContainer #tarjetaCoctel{
+ display: flex;
+ margin: 15px;
+}
+
+#seccionCarrito #productsContainer #tarjetaCoctel #productoCoctel{
+display: flex;
+gap: 20px;
+align-items: center;
+}
+
+#seccionCarrito #productsContainer #tarjetaCoctel #productoCoctel img{
+  height: 100px;
+}
+
+
+#seccionCarrito #productsContainer #productoCoctel #controladorCarrito button {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #ab4493;
+  border-color: #ab4493;
+  border-style: solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#totales{
+  font-size: 1.2rem;
+  width: 90%;
+  padding-left: 15px;
+  margin: auto;
+}
+
+#seccionCarrito #totales .btnTotales {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #ab4493;
+  border-color: #ab4493;
+  border-style: solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* fin carrito */
+
+.tituloNosotros {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.pilarContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: auto;
+  margin: 0px 20px;
+}
+.pilarContainer .pilarItem {
+  padding: 10px;
+}
+
+.staffContainer {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.staffContainer .tituloStaff {
+  width: 100%;
+  text-align: left;
+  margin: 40px 40px 0px 40px;
+}
+.staffContainer figure {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tituloContacto {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.contactoContainer {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 45% 45%;
+  justify-content: center;
+}
+.contactoContainer .mapsContainer {
+  width: 460px;
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #fbfbfb;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.contactoContainer .mapsContainer .tituloMaps {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 20px;
+  color: #ab4493;
+}
+.contactoContainer .mapsContainer .maps {
+  display: block;
+  width: 100%;
+  padding: 0px 10% 0px 10%;
+  border: #0e0e0e 1px solid;
+  border-radius: 5px;
+  margin: 20px 0px 20px 0px;
+}
+.contactoContainer .mapsContainer .maps #maps {
+  width: fit-content;
+}
+.contactoContainer .mapsContainer .titulohorarios {
+  color: #ab4493;
+}
+.contactoContainer .mapsContainer .horarios {
+  width: 100%;
+}
+.contactoContainer .mapsContainer .horarios th, .contactoContainer .mapsContainer .horarios td {
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
+  margin: 5px 0px;
+  background-color: #ab4493;
+  font-size: 1.5rem;
+}
+.contactoContainer .contacoForm {
+  width: 460px;
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #fbfbfb;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.contactoContainer .contacoForm .tituloFormulario {
+  font-size: 39px;
+  text-align: left;
+  padding-bottom: 20px;
+  color: #ab4493;
+}
+.contactoContainer .contacoForm .subTituloFormulario {
+  font-size: 16px;
+  padding-bottom: 30px;
+  color: #0e0e0e;
+}
+.contactoContainer .contacoForm input {
+  background-color: #fbfbfb;
+  width: 408px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ab4493;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.contactoContainer .contacoForm input:focus {
+  outline: 0;
+  border: 1px solid #97d848;
+}
+.contactoContainer .contacoForm textarea {
+  background-color: #fbfbfb;
+  width: 405px;
+  height: 150px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ab4493;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+}
+.contactoContainer .contacoForm textarea:focus {
+  outline: 0;
+  border: 1px solid #97d848;
+}
+.contactoContainer .contacoForm label {
+  display: block;
+  text-align: left;
+}
+.contactoContainer .contacoForm button {
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #ab4493;
+  border-color: #ab4493;
+  border-style: solid;
+  border-radius: 10px;
+  width: 420px;
+  cursor: pointer;
+}
+.contactoContainer .contacoForm button p {
+  color: #fff;
+}
+.contactoContainer .contacoForm span {
+  color: #ab4493;
+}
+.contactoContainer .contacoForm p {
+  font-size: 14px;
+  color: #0e0e0e;
+}
+.contactoContainer .contacoForm .aviso {
+  font-size: 13px;
+  color: #0e0e0e;
+}
+
+footer {
+  width: 100%;
+  background: rgb(233, 173, 95);
+  background: linear-gradient(0deg, #e9ad5f 0%, #e67b5c 100%);
+  margin-bottom: 0%;
+}
+footer .grupo1 {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: initial;
+  padding: 20px 0px;
+}
+footer .grupo1 .div1 {
+  margin-right: auto;
+  margin-left: 10px;
+}
+footer .grupo1 figure {
+  display: flex;
+  flex-direction: unset;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+footer .grupo1 figure img {
+  width: 200px;
+}
+footer .grupo1 .div2 {
+  margin-left: auto;
+  margin-right: 0px;
+  text-align: center;
+}
+footer .grupo1 h2 {
+  font-size: 20px;
+  color: black;
+  font-style: normal;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+footer .grupo1 .contenedorRedesSociales ul {
+  text-align: center;
+}
+footer .grupo1 .contenedorRedesSociales ul li {
+  display: inline-block;
+  text-decoration: none;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+footer .grupo1 .contenedorRedesSociales ul li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 40px;
+  color: black;
+  font-style: normal;
+}
+footer .copyrightContainer {
+  width: 100%;
+  display: inline-block;
+  bottom: 0%;
+}
+footer .copyrightContainer .copyright {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: black;
+  background: rgb(223, 148, 51);
+  background: radial-gradient(circle, #9c784a 0%, #dab17d 100%);
+  padding: 10px 0px;
+  text-align: center;
+  margin-bottom: 0%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .contactoContainer {
+    grid-template-columns: 1fr;
+  }
+  .eventosContainer .eventos:nth-child(2) img {
+    width: 80%;
+  }
+  .eventosContainer .eventos:nth-child(7) img {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: rgb(223, 125, 168);
+    background: radial-gradient(circle, #df7da8 0%, #4a8ddd 100%);
+  }
+  body .mainEvents .eventosContainer {
+    margin: 0;
+  }
+  body .mainEvents .eventosContainer img {
+    width: 95%;
+  }
+  body .mainEvents .eventosContainer figcaption {
+    width: 95%;
+  }
+  body .pilarContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    width: auto;
+    margin: 0px 20px;
+  }
+  body .staffContainer figure img {
+    width: 100%;
+  }
+  body footer {
+    width: auto;
+  }
+  body footer .div1,
+  body footer .redesSociales,
+  body footer .copyrightContainer {
+    width: 100%;
+  }
+  body footer .grupo1 figure img {
+    width: 100%;
+  }
+  body .pilaresIndex {
+    display: flex;
+    justify-content: center;
+  }
+  body .pilaresIndex .listaPilares {
+    width: fit-content;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  body .pilaresIndex .listaPilares .pilarescontainer {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+  }
+  body .carouselContainer {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 95%;
+    justify-content: center;
+  }
+  body .contactoContainer {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 90%;
+    justify-content: center;
+  }
+  body .contactoContainer .mapsContainer {
+    width: 90%;
+  }
+  body .contactoContainer .mapsContainer .maps #maps {
+    width: 90%;
+  }
+  body .contactoContainer .contacoForm {
+    width: 90%;
+  }
+  body .contactoContainer .contacoForm .formulario {
+    width: 90%;
+  }
+  body .contactoContainer .contacoForm .formulario form input {
+    width: 90%;
+  }
+  body .contactoContainer .contacoForm .formulario form textarea {
+    width: 90%;
+  }
+  body .contactoContainer .contacoForm .formulario form button {
+    width: 90%;
+  }
+  body .seccionCocteles #cocteles .photoContainer .productoCoctel {
+    width: 100%;
+  }
+  body .seccionCocteles #cocteles .photoContainer .productoCoctel img {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
