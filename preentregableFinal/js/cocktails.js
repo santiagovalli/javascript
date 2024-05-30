@@ -1,5 +1,12 @@
+
+
+fetch("../jsonFiles/productos.json")
+.then(res =>res.json())
+.then(datos => crearCardCoctel(datos))
+
 const productsContainer = document.querySelector("#productsContainer")
 
+//funcion para crear las cartas de cocteles en cocktails.html
 function crearCardCoctel(productos) {
     productos.forEach(product => {
         const cardCoctel = document.createElement("div")
@@ -17,6 +24,8 @@ function crearCardCoctel(productos) {
         cardCoctel.querySelector('.btnCarrito').addEventListener("click", () =>{
           agregarCarrito(product),
 
+
+          //aplicacion de libreria toastify
           Toastify({
             text: "Agregado",
             duration: 3000,
@@ -35,4 +44,3 @@ function crearCardCoctel(productos) {
         } )
     })
 }
-crearCardCoctel(products);

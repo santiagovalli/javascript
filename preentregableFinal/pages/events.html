@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="margarita, spicy, mojito, fashioned, cuba, libre, alcohol, rum, vodka, gin,daikiri, images">
-    <meta name="description"
-        content="menu con nuestros cocteles disponibles acompañados con imagenes que muestran la profesionalidad y estetica con la que trabajamos ">
+    <meta name="keywords" content="events, marriage,champagne, party, bar, people, dancing, salon, bottle, beer, wine">
+    <meta name="description" content="imagenes con eventos, una descripcion que explica que tipo de evento se realizo, la cantidad de invitados y nuestros servicios ofrecidos">
 
     <!--FONTAWESOME-->
     <script src="https://kit.fontawesome.com/60cad2f523.js" crossorigin="anonymous"></script>
@@ -19,8 +17,7 @@
     <!--CSS-->
     <link rel="stylesheet" href="../estilos/style.css">
 
-    <title>Cocktails</title>
-
+    <title>Eventos</title>
     <!--icono de la pagina-->
     <link rel="shortcut icon" href="../img/GBartendsLogo.ico" type="image/x-icon">
 </head>
@@ -56,30 +53,81 @@
                             <span id="cuentaCarrito">0</span>
                         </i>
                     </a>
-
                 </div>
             </div>
         </nav>
     </header>
-    <!-- seccion principal-->
-    <div id="seccionCarrito">
 
-        <h3 id="carritoVacio">Parece que aun no has agregado ningun producto a tu carrito, hazlo aqui! <a href="./cocktails.html">Agregar productos</a></h3>
+    <div class="mainEvents">
+        <h1 class="tituloEventos">
+            Explora nuestros Eventos
+        </h1>
 
-        <div id="productsContainer">
+        <section class="eventosContainer">
 
-        </div>
+            <figure class="eventos">
+                <img src="../img/casamiento.webp" alt="mesa para cena de casamiento">
+                <figcaption>
+                    Boda con 300 invitados donde nuestro servicio se adapta perfectamente con tu menu gastronomico
+                    brindando las bebidas de mejor calidad y la mejor atencion de nuestros bartenders altamente
+                    capacitados.
+                </figcaption>
+            </figure>
 
-        <div id="totales">
-            <p>Total unidades: <span id="unidades">0</span>
-            </p>
-            <p>Total precio: $<span id="precio">0</span>
-            </p>
-            <button id="comprarCarrito" class="btnTotales">Comprar</button>
-            <button id="reiniciarCarrito" class="btnTotales">Reiniciar Carrito</button>
-        </div>
+            <figure class="eventos">
+                <img src="../img/casamientomini.webp" alt="salon de casamiento con mesas">
+                <figcaption>
+                    Casamiento con 60 invitados con un ambiente calido e intimo que se potencia con nuestra atencion y
+                    carisma ademas de preparar un menu que se adecua perfectamente a los gustos de los invitados.
+                </figcaption>
+            </figure>
+
+            <figure class="eventos">
+                <img src="../img/champagne.webp" alt="mini bar con champagne">
+                <figcaption>
+                    no importa el tamaño de tu evento nosotros nosotros estamos preparados para cada ocasion para
+                    brindarte originalidad y la misma calidad que nos caracteriza.
+                </figcaption>
+            </figure>
+
+            <figure class="eventos">
+                <img src="../img/champagne2.webp" alt="bartender sirivendo champagne">
+                <figcaption>
+                    No solo nos dedicamos a crear cocteles, todo tipo de bedidas entran en nuestro catalogo, porque
+                    nuestro principal objetivo es que tu evento sea perfecto desde inicio a fin.
+
+                </figcaption>
+            </figure>
+
+            <figure class="eventos">
+                <img src="../img/girldrinking.webp" alt="mujer tomando de una botella">
+                <figcaption>
+                    Una fiesta de cumpleaños con 100 invitados una fiesta un poco mas descontracturada e informal donde
+                    nos enfocamos en hacer brillar la noche con nuestro carisma y atencion de altisimo nivel con los
+                    invitados.
+                </figcaption>
+            </figure>
+
+            <figure class="eventos">
+                <img src="../img/party.webp" alt="fiesta privada en un bar">
+                <figcaption>
+                    Una fiesta privada en un bar, donde aportamos nuestro conocimiento en la mixología y nuestra
+                    atencion al cliente
+                </figcaption>
+            </figure>
+
+            <figure class="eventos">
+                <img src="../img/partyBar.webp" alt="personas bailando en una fiesta">
+                <figcaption>
+                    Fiesta de cumpleaños con 40 invitados con un menu simple de cocteles cerveza y vino, donde se
+                    complenta nuestra atencion y bebidas con la musica y el ambiente de disfrute.
+                </figcaption>
+            </figure>
+        </section>
 
     </div>
+
+
 
     <!--inicio de footer-->
 
@@ -131,20 +179,15 @@
         </div>
 
         <div class="copyrightContainer">
-            <P class="copyright">
+            <p class="copyright">
                 <small> &copy;2023 <b> gbartends </b> - todos los derechos reservados.</small>
-            </P>
+            </p>
         </div>
     </footer>
 
-    <!-- sweet alert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
     <!--JS script-->
-    <script src="../js/products.js"></script>
     <script src="../js/app.js"></script>
-    <script src="../js/cart.js"></script>
+
     <!--BOOSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -152,65 +195,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<section class="photoContainer">
-                <div class="productoCoctel">
-                    <img src="../img/margarita.webp" alt="margarita" class="margarita">
-                    <h5>Margarita</h5>
-                    <p>Tequila 100% agave, Triple sec, jugo de limon</p>
-                </div>
-
-                <div class="productoCoctel">
-                    <img src="../img/spicyMargarita.webp" alt="spicyMargarita" class="spicyMargarita">
-                    <h5>Spicy margarita</h5>
-                    <p>Tequila 100% agave, Triple sec, jugo de limon, rodajas de jalapeño</p>
-                </div>
-
-                <div class="productoCoctel">
-                    <img src="../img/pinaColada.webp" alt="pinaColada" class="pinaColada">
-                    <h5>Piña colada</h5>
-                    <p>Ron blanco, crema de coco, jugo de piña</p>
-                </div>
-
-                <div class="productoCoctel">
-                    <img src="../img/oldFashioned.webp" alt="oldFashioned" class="oldFashioned">
-                    <h5>Old fashioned</h5>
-                    <p>Bourbon o rye whiskey,bitters, pizca de agua, terron de azucar</p>
-                </div>
-
-                <div class="productoCoctel">
-                    <img src="../img/mojito.webp" alt="mojito" class="mojito">
-                    <h5>Mojito</h5>
-                    <p>Ron cubano, jugo de limon, hojas de menta, caña de azucar,agua con gas</p>
-                </div>
-
-                <div class="productoCoctel">
-                    <img src="../img/cubaLibre.webp" alt="cubaLibre" class="cubaLibre">
-                    <h5>Cuba libre</h5>
-                    <p>Ron cubano, rodajas de limon, coca-cola, </p>
-                </div>
-
-                <div class="productoCoctel">
-                    <img src="../img/daikiri.webp" alt="daikiri" class="daikiri">
-                    <h5>Daikiri</h5>
-                    <p>Ron blanco, jugo de limon, frutilla</p>
-                </div>
-
-
-                <div class="productoCoctel">
-                    <img src="../img/ginTonic.webp" alt="ginTonic" class="ginTonic">
-                    <h5>Gin tonic</h5>
-                    <p>Gin, agua tonica</p>
-                </div>
-            </section>-->

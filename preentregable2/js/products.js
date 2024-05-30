@@ -8,7 +8,7 @@ const products = [
     },
     {
         id:2 ,
-        name: "scpicyMargarita" ,
+        name: "spicyMargarita" ,
         img: "../img/spicyMargarita.webp" ,
         description:"Tequila 100% agave, Triple sec, jugo de limon, rodajas de jalapeño" ,
         price: 5.50, 
